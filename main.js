@@ -287,7 +287,7 @@ of array objects that exist. */
 cardsonDOM(pets);
 
 
-// target dino arrays
+// Loop through pets array and target dino arrays
 
 let dinoArr = [];
  for (let i = 0; i < pets.length; i++) {
@@ -296,7 +296,7 @@ let dinoArr = [];
   }
  }
 
- //target cat array
+ //Loop through pets array and target cat array
  let catArr = [];
 for (i=0; i < pets.length; i++){
   if (pets[i].type === "cat"){
@@ -304,7 +304,7 @@ for (i=0; i < pets.length; i++){
   }
 }
 
-//target dog array
+//Loop through pets array and target dog array
 let dogArr = [];
 for (i=0; i < pets.length; i++){
   if (pets[i].type === "dog"){
@@ -318,7 +318,7 @@ btn4.addEventListener("click", () => {
 });
 
 
-
+//click buttons to filter - calls to anim array to display on DOM
 
 btn1.addEventListener("click", () =>{
   console.log("dog");
