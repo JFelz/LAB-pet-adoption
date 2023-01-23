@@ -8,21 +8,21 @@
   border-radius: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 55%;
+  width: 75%;
   background-color: rgb(245, 245, 245);
 }
 .btn-dogs{
   border-radius: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 55%;
+  width: 75%;
 background-color: rgb(255, 96, 96);
 }
 .btn-cats{
   border-radius: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 55%;
+  width: 75%;
   background-color: orange;
 }
 .btn-dino{
@@ -30,12 +30,25 @@ background-color: rgb(255, 96, 96);
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 5px;
-  width: 55%;
+  width: 75%;
   background-color: rgb(255, 255, 95);
 }
 .font-1{
+  
+  margin-top: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
   font-family: Poppins;
   font-weight: bold;
+  align-items: center; 
+}
+
+
+.font-2{
+  margin-top: 50px; 
+  margin-bottom: 1%;
+  font-size: smaller;
+ 
 }
 
 .section{
@@ -44,5 +57,5 @@ background-color: rgb(255, 96, 96);
   flex-direction:  column;
   align-items: center;
 
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(224, 224, 224);
 }
