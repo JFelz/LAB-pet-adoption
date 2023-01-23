@@ -1,0 +1,14 @@
+#blue-card{
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+.btn-dogs{
+background-color: rgb(255, 96, 96);
+}
+.btn-cats{
+  background-color: orange;
+}
+.btn-dino{
+  background-color: rgb(255, 255, 95);
+}
