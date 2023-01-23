@@ -125,7 +125,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Drives at a safe rate of speed in snow or rain.",
       type: "dino",
-      imageUrl: "https://images.readwrite.com/wp-content/uploads/2018/03/t-rex-dino-quiz-e1490854556549.jpg"
+      imageUrl: "https://images.newscientist.com/wp-content/uploads/2022/07/25151808/SEI_116388714.jpg?crop=4:3,smart&width=1200&height=900&upscale=true"
     },
     {
      id: 17,
@@ -149,7 +149,7 @@ const pets = [
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
       type: "dog",
-      imageUrl: "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg"
+      imageUrl: "https://4.bp.blogspot.com/-o2s2nB50Qrk/WPkA6NQvdsI/AAAAAAAACy4/SU7wEkQL-bQbb3XMiE9xvrwY06iVtVQNwCLcB/s1600/dog-training-look.jpg"
     },
     {
       id: 20,
