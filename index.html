@@ -13,11 +13,50 @@
     <h1 class="font-1">Jovanni's Pet Shelter</h1>
     <h5>We take the pets you neglect</h5>
     <p class="font-2">Cycle through the categories to avoid the pets you hate!</p>
+  </div>
+  <div class="btn-section">
     <button class="btn-all">All</button>
     <button class="btn-dogs">Dogs</button>
     <button class="btn-cats">Cats</button>
     <button class="btn-dino">Dino's</button>
   </div>
+  //Start of Form
+    <form style="padding: 10%;">
+
+      <div class="mb-1">
+        <label for="name" class="form-label"></label>
+        <input type="text" class="form-control" id="Name" placeholder="Name"
+        required aria-describedby="text">
+        <div id="Name" class="form-text"></div>
+      </div>
+
+      <div class="mb-2">
+        <label for="text" class="form-label"></label>
+        <input type="text" class="form-control" id="PetType" placeholder="Pet Type"
+        required aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="text" class="form-label"></label>
+        <input type="text" class="form-control" placeholder="Pet Color"
+        required id="PetColor">
+      </div>
+
+      <div class="mb-4">
+        <label for="text" class="form-label"></label>
+        <input type="text" class="form-control" placeholder="Special Skill"
+        required id="SpecialSkill">
+      </div>
+
+      <div class="mb-5">
+        <label for="floatingInput" class="form-label"></label>
+        <input type="url" class="form-control" placeholder="Image Url"
+        required id="image">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Add Pet</button>
+    </form>
+  
   <div id="blue-card">
     <div class="card" style="width: 18rem;">
       <img src="..." class="card-img-top" alt="...">

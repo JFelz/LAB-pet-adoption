@@ -4,34 +4,41 @@
   justify-content: center;
  
 }
+.btn-section{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:  row;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
 .btn-all{
   border-radius: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 75%;
+  width: 20%;
   background-color: rgb(245, 245, 245);
 }
 .btn-dogs{
   border-radius: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 75%;
-background-color: rgb(255, 96, 96);
+  width: 20%;
+background-color: rgb(96, 160, 255);
 }
-.btn-cats{
+.btn-cats{ 
   border-radius: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 75%;
-  background-color: orange;
+  width: 20%;
+  background-color: rgb(245, 245, 245);
 }
 .btn-dino{
   border-radius: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 5px;
-  width: 75%;
-  background-color: rgb(255, 255, 95);
+  width: 20%;
+  background-color: rgb(96, 160, 255);
 }
 .font-1{
   
@@ -46,7 +53,7 @@ background-color: rgb(255, 96, 96);
 
 .font-2{
   margin-top: 50px; 
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   font-size: smaller;
  
 }
@@ -56,6 +63,7 @@ background-color: rgb(255, 96, 96);
   flex-wrap: wrap;
   flex-direction:  column;
   align-items: center;
-
-  background-color: rgb(224, 224, 224);
+  color: white;
+  text-shadow: rgb(120, 120, 120) 1px 1px;
+  background-color: rgb(107, 193, 255);
 }
