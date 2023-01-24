@@ -242,11 +242,10 @@ const pets = [
   ];
 
   // Function: call later to attach to id and render something to html browser
-const renderToDom = (divId, htmlToRender) => {
+const renderToDom = (divId, renderToHTML) => {
   const selectDiv = document.querySelector(divId);
-
-  selectDiv.innerHTML = htmlToRender
-}
+  selectDiv.innerHTML = renderToHTML;
+};
 
 /* attach the array info to each card - the cards will duplicate to the amount
 of array objects that exist. */
