@@ -241,17 +241,18 @@ const pets = [
     }
   ];
 
+/////Objective: I want to display all pet info on page and filter through them by type.///
+
+  ////////// 1. I want to be able to display info on webpage. What do I do? //////////
+
   // Function: call later to attach to id and render something to html browser
 const renderToDom = (divId, renderToHTML) => {
   const selectDiv = document.querySelector(divId);
   selectDiv.innerHTML = renderToHTML;
 };
 
-/* attach the array info to each card - the cards will duplicate to the amount
-of array objects that exist. */
-  const app = document.querySelector('#blue-card');
-  
-  
+
+////////// 2. I want to display specific info from each array on the web page. //////////
   
 
   const cardsonDOM = (pets) => {
@@ -264,17 +265,18 @@ of array objects that exist. */
   <img src="${pet.imageUrl}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">'${pet.name}'</h5>
-    <p class="card-text">Type: ${pet.type["dino"]}</p>
+    <p class="card-text">Type: ${pet.type}</p>
     <p class="card-text">Color: ${pet.color}</p>
     <p class="card-text">Special Skill: ${pet.specialSkill}</p>
-    <a href="#" class="btn btn-primary">Adopt Me</a>
+    <a href="#" class="btn btn-primary" id="delete"--${pet.id}>Delete Me</a>
   </div>
 </div>`
   }
-
+//Attachs card with array info to the element ID within the DOM to be displayed
   renderToDom('#blue-card', domString);
   }
 
+////////// 3. How do I filter between animal types? //////////
 
   //Selects HTML elem for every animal button
   const btn1 = document.querySelector(".btn-dogs");
@@ -282,9 +284,10 @@ of array objects that exist. */
   const btn3 = document.querySelector(".btn-dino");
   const btn4 = document.querySelector(".btn-all");
 
-
+//Display all the info on array first before filtering.
 cardsonDOM(pets);
 
+////////// 4. How do I make the buttons filter? //////////
 
 // Loop through pets array and target dino arrays
 
@@ -317,7 +320,7 @@ btn4.addEventListener("click", () => {
 });
 
 
-//click buttons to filter - calls to anim array to display on DOM
+//Set array to a button event. Click buttons to filter - calls to anim array to display on DOM
 
 btn1.addEventListener("click", () =>{
   console.log("dog");
@@ -334,3 +337,83 @@ btn3.addEventListener("click", () => {
   console.log("Dino");
   cardsonDOM(dinoArr);
 });
+
+////////// 5. How do I add and delete pet info? //////////
+
+/*added forms to CSS from Bootstrap*/
+
+/* Create a function that grabs all the values from the form, pushes the new object to the array, then repaints the DOM with the new teammate*/
+
+//Add an event listener for the form submit and pass it the function (callback)
+
+
+const createMember = () => {
+  event.preventDefault();
+
+  //1.grabs all the values from the form
+
+  //This selects the info from the ID where users enter their pet info
+  const name = document.querySelector("#Name");
+  const petType = document.querySelector("#PetType");
+  const petColor = document.querySelector("#PetColor");
+  const specialSkill = document.querySelector("#SpecialSkill");
+  const imgUrl = document.querySelector("#image");
+
+  //2. create an object from values
+
+const newMember = {
+  
+  //this grabs the value that the user adds to the input field and stores into an object.
+  //Every input has a ".value" info within
+  name: name.value,
+  color: petColor.value,
+  specialSkill: specialSkill.value,
+  type: petType.value,
+  imageUrl: imgUrl.value
+};
+
+console.log("new member", newMember);
+
+  //3. push to team array - render to DOM
+
+  pets.push(newMember);
+
+console.log(newMember);
+
+  //Re-renders DOM with pets array with new team member
+  cardsonDOM(pets);
+
+}
+
+//3. Add an event listener to the button to add
+
+//grab the button class from HTML and add it to a button value (submitButton).
+//Make that button value an Event listener - when clicked on DOm it does X
+const btnAdd = document.querySelector("#addButton");
+
+btnAdd.addEventListener("click", createMember);
+
+
+// Here we will be using event bubbling
+// 1. Target the app div
+
+const blueCarddiv = document.querySelector("#blue-card");
+
+// 2. Add an event listener to capture clicks
+blueCarddiv.addEventListener("click", (e) =>{
+// if (else.target.id === "delete")
+if (e.target.id.includes("delete")){
+pets.splice(newMember);
+}
+});
+
+
+// 3. check e.target.id includes "delete"
+// 4. Add logic to remove from array
+// 5. Repaint the DOM with the updated array
+
+const startUp = () => {
+  cardsonDOM(pets);
+}
+
+startUp();
