@@ -403,7 +403,9 @@ const blueCarddiv = document.querySelector("#blue-card");
 blueCarddiv.addEventListener("click", (e) =>{
 // if (else.target.id === "delete")
 if (e.target.id.includes("delete")){
-pets.splice(newMember);
+
+
+
 }
 });
 
