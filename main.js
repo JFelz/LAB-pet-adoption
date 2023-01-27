@@ -268,7 +268,7 @@ const renderToDom = (divId, renderToHTML) => {
     <p class="card-text">Type: ${pet.type}</p>
     <p class="card-text">Color: ${pet.color}</p>
     <p class="card-text">Special Skill: ${pet.specialSkill}</p>
-    <a href="#" class="btn btn-primary" id="delete--${pet.id}">Delete Me</a>
+    <a href="#" class="btn btn-danger" id="delete--${pet.id}">Delete Me</a>
   </div>
 </div>`
   }
