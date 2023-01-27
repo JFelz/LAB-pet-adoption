@@ -268,7 +268,7 @@ const renderToDom = (divId, renderToHTML) => {
     <p class="card-text">Type: ${pet.type}</p>
     <p class="card-text">Color: ${pet.color}</p>
     <p class="card-text">Special Skill: ${pet.specialSkill}</p>
-    <a href="#" class="btn btn-primary" id="delete"--${pet.id}>Delete Me</a>
+    <a href="#" class="btn btn-primary" id="delete--${pet.id}">Delete Me</a>
   </div>
 </div>`
   }
@@ -411,19 +411,26 @@ console.log("Delete Me!");
 is "id=delete" and on the right is "pet.id" from the cardsonDom function and displays it in two separate outcomes */
 const [taco, memID] = event.target.id.split("--");
 
-for (const pet of pets){
 
-console.log([ taco , pet.id]);
+console.log([taco, memID]);
+
 //what object needs to be removed and I know my memberId
 const indexOfmember = pets.findIndex((obj) => obj.id === Number(memID));
-indexOfmember;
+
 pets.splice(indexOfmember, 1);
-}};
 
 cardsonDOM(pets);
 
 }
+}
+
 );
+
+
+
+
+
+
 
 
 // 3. check e.target.id includes "delete"
