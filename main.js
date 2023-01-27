@@ -365,6 +365,7 @@ const newMember = {
   
   //this grabs the value that the user adds to the input field and stores into an object.
   //Every input has a ".value" info within
+  id: 31,
   name: name.value,
   color: petColor.value,
   specialSkill: specialSkill.value,
@@ -400,14 +401,29 @@ btnAdd.addEventListener("click", createMember);
 const blueCarddiv = document.querySelector("#blue-card");
 
 // 2. Add an event listener to capture clicks
-blueCarddiv.addEventListener("click", (e) =>{
+blueCarddiv.addEventListener("click", (event) =>{
 // if (else.target.id === "delete")
-if (e.target.id.includes("delete")){
+if (event.target.id.includes("delete")){
+console.log("Delete Me!");
 
 
+/* Splits whats on either side of "--" which on the left
+is "id=delete" and on the right is "pet.id" from the cardsonDom function and displays it in two separate outcomes */
+const [taco, memID] = event.target.id.split("--");
+
+for (const pet of pets){
+
+console.log([ taco , pet.id]);
+//what object needs to be removed and I know my memberId
+const indexOfmember = pets.findIndex((obj) => obj.id === Number(memID));
+indexOfmember;
+pets.splice(indexOfmember, 1);
+}};
+
+cardsonDOM(pets);
 
 }
-});
+);
 
 
 // 3. check e.target.id includes "delete"
