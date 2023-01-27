@@ -268,7 +268,7 @@ const renderToDom = (divId, renderToHTML) => {
     <p class="card-text">Type: ${pet.type}</p>
     <p class="card-text">Color: ${pet.color}</p>
     <p class="card-text">Special Skill: ${pet.specialSkill}</p>
-    <a href="#" class="btn btn-primary" id="delete"--${pet.id}>Delete Me</a>
+    <a href="#" class="btn btn-primary" id="delete--${pet.id}">Delete Me</a>
   </div>
 </div>`
   }
@@ -365,6 +365,7 @@ const newMember = {
   
   //this grabs the value that the user adds to the input field and stores into an object.
   //Every input has a ".value" info within
+  id: 31,
   name: name.value,
   color: petColor.value,
   specialSkill: specialSkill.value,
@@ -400,12 +401,36 @@ btnAdd.addEventListener("click", createMember);
 const blueCarddiv = document.querySelector("#blue-card");
 
 // 2. Add an event listener to capture clicks
-blueCarddiv.addEventListener("click", (e) =>{
+blueCarddiv.addEventListener("click", (event) =>{
 // if (else.target.id === "delete")
-if (e.target.id.includes("delete")){
-pets.splice(newMember);
+if (event.target.id.includes("delete")){
+console.log("Delete Me!");
+
+
+/* Splits whats on either side of "--" which on the left
+is "id=delete" and on the right is "pet.id" from the cardsonDom function and displays it in two separate outcomes */
+const [taco, memID] = event.target.id.split("--");
+
+
+console.log([taco, memID]);
+
+//what object needs to be removed and I know my memberId
+const indexOfmember = pets.findIndex((obj) => obj.id === Number(memID));
+
+pets.splice(indexOfmember, 1);
+
+cardsonDOM(pets);
+
 }
-});
+}
+
+);
+
+
+
+
+
+
 
 
 // 3. check e.target.id includes "delete"
